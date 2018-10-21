@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Jump : MonoBehaviour {
-    Vector3 jumpHeight = new Vector3(0.0f, 0.2f, 0.0f);
+    Vector3 jumpHeight = new Vector3(0.0f, 0.025f, 0.0f);
 
     // Use this for initialization
     void Start () {
