@@ -12,6 +12,7 @@ public class GravityController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Cursor.visible = true;
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         pos = rb.position;
