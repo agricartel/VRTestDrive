@@ -18,14 +18,19 @@ public class CameraControl : MonoBehaviour
         playerBody = player.GetComponent<Rigidbody>();
     }
 
+    void Update()
+    {
+        MovePlayer();
+    }
+
     // LateUpdate is called once per frame after update
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;
     }
 
-    void movePlayer()
+    void MovePlayer()
     {
-
+        //playerBody.AddForce(Input.GetAxis("Horizontal2"),0f,Input.GetAxis("Vertical2"),ForceMode.Force);
     }
 }
