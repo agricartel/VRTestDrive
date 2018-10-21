@@ -5,15 +5,17 @@ using UnityEngine;
 public class GravityController : MonoBehaviour {
 
     public Vector3 g = Physics.gravity;
-    Rigidbody rb;
-    Collider coll;
+    public Rigidbody rb;
+    public Collider coll;
     Vector3 pos;
+    MouseLook mousepos;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
-        pos = transform.position;
+        pos = rb.position;
+        mousepos = new MouseLook();
 	}
 	
 	// Update is called once per frame
@@ -23,8 +25,11 @@ public class GravityController : MonoBehaviour {
 
     void OnMouseDrag()
     {
-        pos.x = ((Input.mousePosition.x - 1440) / 1440);
-        pos.y = ((Input.mousePosition.y) / 900);
-        coll.transform.position = pos;
+        //pos.x = ((Input.mousePosition.x - 1440) / 1440);
+        //pos.y = ((Input.mousePosition.y) / 900);
+        //pos = mousepos.MousePos();
+        //coll.transform.position = pos;
+        Debug.Log(Input.mousePosition - pos);
+        rb.AddForce((Input.mousePosition - pos) / 75f, ForceMode.Force);
     }
 }

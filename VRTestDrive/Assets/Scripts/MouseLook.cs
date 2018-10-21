@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class MouseLook : MonoBehaviour {
 
     public Camera cam;
+
 
     // Use this for initialization
     void Start () {
@@ -18,8 +19,6 @@ public class NewBehaviourScript : MonoBehaviour {
 
     public Vector3 MousePos()
     {
-
-
-        return new Vector3(0f,0f,0f);
+        return cam.ScreenToWorldPoint(Input.mousePosition);
     }
 }
