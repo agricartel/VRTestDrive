@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\GravityController.cs" />
+     <Compile Include="Assets\Scripts\Jump.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Lenovo/Documents/VRTestDrive/VRTestDrive/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
